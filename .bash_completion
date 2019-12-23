@@ -1,0 +1,10 @@
+ source /usr/share/bash-completion/completions/pass
+ # use 'passasta' or 'passme' instead of normal 'pass' command
+ _passasta(){
+     PASSWORD_STORE_DIR=~/.pass/asta/.password-store _pass
+ }
+ complete -o filenames -o nospace -F _passasta passasta
+ _passme(){
+     PASSWORD_STORE_DIR=~/.pass/me/.password-store _pass
+ }
+ complete -o filenames -o nospace -F _passme passme
