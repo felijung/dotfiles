@@ -1,10 +1,12 @@
+  # use 'passjob' or 'passme' instead of normal 'pass' command = 'passjob <account>'
+  # relies on corresponding bash-alias in .bashrc
  source /usr/share/bash-completion/completions/pass
- # use 'passasta' or 'passme' infront of normal 'pass' command = 'passme pass <account>'
- _passasta(){
-     PASSWORD_STORE_DIR=~/.pass/asta/.password-store _pass
+
+ _passjob(){
+     PASSWORD_STORE_DIR=~/git/job/ _pass
  }
- complete -o filenames -o nospace -F _passasta passasta
+ complete -o filenames -o nospace -F _passjob passjob
  _passme(){
-     PASSWORD_STORE_DIR=~/.pass/me/.password-store _pass
+     PASSWORD_STORE_DIR=~/.pass/me/ _pass
  }
  complete -o filenames -o nospace -F _passme passme
