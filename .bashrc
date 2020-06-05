@@ -23,7 +23,7 @@ alias l='ls -CF'
 
 #pass-alias, to have two seperate stores
 alias passjob="PASSWORD_STORE_DIR=~/git/job/ pass"
-alias passme="PASSWORD_STORE_DIR=~/.pass/me/ pass"
+alias passme="PASSWORD_STORE_DIR=~/.password-store/me/ pass"
 
 
 #command: borg_full full os backup with borg (ex /mnt)
